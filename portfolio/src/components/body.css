@@ -1,12 +1,26 @@
+.container {
+  background: #fff;  
+}
+
 .App {
   text-align: center;
-  background: linear-gradient(0deg,#ff7a52,#ffe366);
+  background: var(--lightGrey-bg-color);
 }
 
 .App-logo {
   height: 15vmin;
   pointer-events: none;
   border-radius: 50%;
+}
+
+.App-backgound {
+  border-radius: 50%;
+  background: var(--blue-bg-color);
+}
+
+.App-background2 {
+  border-radius: 50%;
+  background: var(--yellow-bg-color);
 }
 
 .navbar-light .navbar-brand {
@@ -17,12 +31,12 @@
   color: #fff;
 }
 
-.navbar {
+/* .navbar {
   margin-bottom: 1rem;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .App-logo, .App-backgound, .App-background2{
     animation: App-logo-spin infinite 20s linear;
   }
 }
@@ -41,6 +55,6 @@
 }
 
 .container {
-  background: var(--blue-bg-color);
+  /* background: var(--blue-bg-color); */
   /*background-color: var(--main-bg-color); */
 }

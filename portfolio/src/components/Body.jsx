@@ -1,8 +1,10 @@
 import React from 'react';
 
-import {Button,Col,Container,Form,FormControl,Nav,Navbar,NavDropdown,Row} from 'react-bootstrap';
+import { Col,Container, Row} from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
 
 import CarousseLControlled from './slider';
+import ReactExo from './ReactApi';
 import logo from './img/moi.jpeg';
 import styles from './body.css';
 
@@ -16,39 +18,23 @@ import styles from './body.css';
 // import Mobile from './layouts/Mobile.layout';
 // import ScoreBoard from './scoreBoard-Page/ScoreBoard';
 
-export default function Router (){
+export default function Body (){
   return(  
-  <>
-    <Navbar bg="dark" expand="lg">
-      <Navbar.Brand href="#home">Home</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Javascript</Nav.Link>
-          <Nav.Link href="#link">React</Nav.Link>
-          <NavDropdown title="Contact Me" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">GitHub</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Mail</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Linkedin</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
-        </Form>
-      </Navbar.Collapse>
-  </Navbar>
+  <>  
   <Container>
+  <CarousseLControlled />
     {/* Stack the columns on mobile by making one full-width and the other half-width */}
     <Row>
       <Col xs={12} md={8}>
         <img src={logo} className="App-logo" alt="logo" />
+        <img className="App-backgound" alt="Bg Blue" />
+        <img className="App-background2" alt="Bg Yellow" />
         <h2>Thomas Chalanson</h2>
         <h1>Développeur Web</h1>
         <a
           className="App-link"
           href="https://www.wildcodeschool.com/fr-FR"
+          //targer ouvre le lien dans une autre fenêtre
           target="_blank"
           rel="noopener noreferrer"
         > 
@@ -61,7 +47,7 @@ export default function Router (){
         </p>         
       </Col>
 
-      <CarousseLControlled />
+      <ReactExo />
 
       <Col xs={6} md={4}>
         
